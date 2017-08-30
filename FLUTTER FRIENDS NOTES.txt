@@ -1,0 +1,225 @@
+
+
+
+Happy Flutter friends
+glitchz
+if 2 players die at teh same moment they both get a win. else if statement not working??
+sometimes after restart, goes straight to gameover screen
+
+ToDo
+weekend- 
+add menu to game over screen (survival) also make menu delay
+finalize powerup frequencies (SSB64)
+WALLS (start)
+music/SFX
+
+research how to add object that can be manipulated
+speed up level progression based on how far the player is to the right
+Party mode!!!
+change Kyles to static objects
+menu: preview for each level/ survival
+think about changing every powerup/gem to being the same object with seperate images
+
+One Level with Kyle
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+HIGHER INDEX = ARRANGE FRONT
+LOWER INDEX = ARRANGE BACK
+AddChild(noAt) = VERY FRONT apparently forever = makes highest index.
+
+if item has a reason to be behind (eg invince) make at 1; otherwise addchild cause its easy
+
+menu1p
+menu2p
+menuDifficulty
+menuParty2p
+menuQuest
+menuSurvival1p
+
+<settings<
+CUSTOM CONTROLS
+EASY PHYSICS
+
+		
+MUSIC
+Saint-Saens - The Aquarium
+
+
+scoring bonuses, close shaves?
+extend menu > different modes, options, computer controlled opponents, name entry, COOP MODE
+FINAL MENU. (Inactive buttons if necesary)
+levels
+1: fires come. shield in middle. invincibility at end.
+2: shield in middle, challenge to get, fire behind.
+
+Meat boy style levels, FAST challeneges
+Steven Ford: level design
+exit, flame comes and rapes screen
+go with the flow, ride the flames!
+
+
+save file???
+
+Quickplay- Play instantly
+Options:
+completely customizable controls
+sfx and music on/off
+easy physics mode
+
+select mode
+
+POWERUPS
+
+-Random Box??? - Grey
+	Teleport- switch places with another player
+	Hyper sensitive controls- Fall faster, fly higher, move quicker
+	Other players grow
+	Reverse controls + fall up- you/everyone/others
+-sheild - green
+-extra lives - White
+-invincibility - Yellow
+-Freeze- blue
+-Lethal- red
+Gravity - other players gravitate towards you, slightly heavier- 
+shoot at players.
+-Gems - worth set amount of gems 10-100 white
+
+//Treasure Chest - Super rare (once every 10 games) contains about 5 games worth of gems
+
+
+GAMEPLAY Ideas
+Keep gameplay very Mario-Party/Super Smash esque. Random BUT predictable, random minigames at the end of levels.
+Seperate Paths divided by obstacles
+Fire that comes from all 4 directions
+Enemies
+black holes as enemies
+
+
+Abilities: fourth button? 
+	Vanish, go invisible and immune to fire, but no one can see you, not even yourself 
+	Boost, burst of speed forward, Bumps other players. %Burst > return to previous velocity. risk/reward higher speed 		when executed
+	Grab, grab another player
+	Armor Lock. freeze in place. invincible.
+	Time manipulation. Rewind time - Braid.
+	Projectile? slow velocity. Pre-firing animation so other players see it coming. basically a death sentence if it 	hits you
+
+IDEAS FROM NICK:
+-What about a power that keeps your character from constantly falling? then you have to use WSAD keys to go any direction for a limited time. 
+-Power for random: reverse left and right like bomberman.
+-smash bros gay random thing that flips map upside down (GAY).
+
+
+Weapon drops that take the place of ability? Take from SSB. bump HARD to drop everytime
+	dragoon
+	bat
+	sword
+	ice flower: hold wind on to freeze
+	bomb. throw whatever it hits causes large area explosion.
+	bumper. throw. stays in place
+	gun
+
+	
+lives system? vs players lose points when die? (different modes)
+score gets bigger and numbers rise gradually when points are aquired. lives get red and bounce when lost
+backgrounds change each level. speed up as level goes on. small backgrounds that change '.left' position often
+party ball. put all players in a ball. all have influence over where the ball goes
+duels: players try to bump each other into increasingly shrinking walls of fire
+beginner mode: movement left to right auto decelerates to zero
+players are engulfed in flame (yell profanity?)
+higher levels, walls need to come closing in
+Killing another player nets you a percentage of their loot. (Encourages attacking leading player)
+
+
+
+Network Play:
+very Clean presentation DONE
+Voice Support (no. text chat)
+Good AFK detection. 60 seconds max inactivity boot. 
+"Players I Like" instead of friends
+Challenges. New Challenge available every time one is completed. 5 open challenges at once.
+challenges award points. no shit.
+challenges completed recorded.
+no less than 50 creative challenges at time of launch
+About 1 Gem a second + In Game Collections/Commendations
+Levels/Ranks
+	Nobody		0
+	Recruit		150		
+	Novice		250
+	Apprentice	350
+	Contender	500
+	Bandit		750
+	Brute		1150
+	Monster		1700
+	Beast		2600
+	Assasin		3850
+	Desperado	5800
+	Specialist	8650
+	Professional	13000
+	Expert		19500
+	Liege		29200
+	Adept		35000
+	Hero		
+	Champion	42000
+	Ruler		50000
+	Master		60000
+	Lord		72000
+	King		87000
+	Legend
+	Deity		105000
+	Supreme Deity	200000
+	Creator
+
+Store: outfits, character catchphrases, taunts, death animations, spawn animations, Title Adjectives (Elite, Badass, Nice, Friendly, Feirce, Terrible, Awesome, Almighty), Gem 
+Currency: Flutter Funds
+Gain money for: Time playing, Vicotory, Special Actions (medals)
+Keep records of stats
+Types of matches:
+	1P adventure
+	Challenges as in Jetman: never ending level, see who can do best. Not simultaneous
+	Team Survival
+	Party Mode: Free for All, sometimes team, complete randomness. Collect gems, 20,000 gems = 1 win
+	Custom games, join games a-la combat arms or warcraft
+	Solo mode
+	Wager Mode
+	Duels, walls close in
+minigames:
+party ball
+stay away from one person! 3 v 1
+team partyball
+eat everyone in a set amount of time 3 v 1
+one player shoots the fire 3 v 1
+lightning rush. any player that doesnt get a lightning is screwed! 
+gem rush
+
+easy timer code
+
+
+
+
+var player1Death:Timer = new Timer(1000);
+player1Death.addEventListener(TimerEvent.TIMER, onTimer);
+player1Death.start();
+ 
+function onTimer(evt:TimerEvent):void {
+	friend1.x = 100;
+}
+
+
+
+Build 1.0 
+had no restart
+only 2 players
+no high score
+game didnt end unless all players were dead
+
+build 2.0 Oct 19
+resart
+3 players
+high score
+reset button
+
+build 3.0
+death animations
+better fire animations
+keeps track of wins
+3.1: random fire size
